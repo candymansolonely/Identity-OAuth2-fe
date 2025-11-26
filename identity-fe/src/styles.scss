@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+@use './assets/custom-scss/customs.scss';
+.layout-content-wrapper-inside {
+  max-width: 100%;
+}
+.tw-w-6 {
+  width: 1.5rem;
+}
+
