@@ -1,49 +1,58 @@
-<div class="mt-5 flex flex-col">
-  <!-- Tiêu đề -->
-  <h1 class="text-6xl font-bold text-center text-blue-900">Login</h1>
-  <p class="text-center mt-2 text-base text-blue-900">Welcom to PMRPACS</p>
+<div class="p-7 border-round-2xl bg-blur">
+  <div class="mt-5 flex flex-col">
+    <!-- Tiêu đề -->
+    <h1 class="text-6xl font-bold text-center text-blue-900">Đăng nhập</h1>
+    <p class="text-center mt-2 text-base text-blue-900">Welcom to AERP</p>
 
-  <!-- Thông báo lỗi -->
-  <p *ngIf="error" class="text-red-500 text-sm text-center mt-2">
-    {{error}}
-  </p>
+    <!-- Thông báo lỗi -->
+    <p *ngIf="error" class="text-red-500 text-sm text-center mt-2">
+      {{error}}
+    </p>
 
-</div>
+  </div>
 
-<!-- Form -->
-<div class="mt-5 flex flex-col gap-4" [formGroup]="loginForm">
-  <!-- Tên đăng nhập -->
-  <div class="flex flex-col gap-2">
-    <div class="p-inputgroup">
-      <span class="mr-2">
-        <i class="pi pi-user"></i>
-      </span>
-      <label class="text-center mt-2 text-base text-blue-900">Tên đăng nhập</label>
+  <!-- Form -->
+  <div class="mt-5 flex flex-col gap-2" [formGroup]="loginForm">
+    <!-- Tên đăng nhập -->
+    <div class="flex flex-col gap-2">
+      <div class="p-inputgroup">
+        <span class="mr-2">
+          <i class="pi pi-user"></i>
+        </span>
+        <label class="text-center mt-2 text-base text-blue-900">Tên đăng nhập</label>
+      </div>
+      <input pInputText type="text" placeholder="username" formControlName="username" />
     </div>
-    <input pInputText type="text" placeholder="username" formControlName="username" />
-  </div>
 
-  <!-- Mật khẩu -->
-  <div class="flex flex-col gap-2">
-    <label class="mt-2 text-base text-blue-900">
-      <span class="mr-2">
-        <i class="pi pi-lock"></i>
-      </span>
-      <span>Mật khẩu</span>
-    </label>
+    <!-- Mật khẩu -->
+    <div class="flex flex-col gap-2">
+      <label class="mt-2 text-base text-blue-900">
+        <span class="mr-2">
+          <i class="pi pi-lock"></i>
+        </span>
+        <span>Mật khẩu</span>
+      </label>
 
-    <div class="p-inputgroup">
-      <p-password [formControlName]="'password'" placeholder="password" [toggleMask]="true" [feedback]="false"/>
+      <div class="p-inputgroup w-full">
+        <p-password [styleClass]="'w-full'" [inputStyleClass]="'w-full'" [formControlName]="'password'"
+          placeholder="password" [toggleMask]="true" [feedback]="false" />
+      </div>
+    </div>
+
+    <!-- Quên mật khẩu -->
+    <div class="flex justify-end text-sm">
+      <a href="#" class="text-blue-600">Quên mật khẩu ?</a>
+    </div>
+
+    <!-- Nút đăng nhập -->
+    <div>
+      <button (click)="onLogin()" [loading]="loading" pButton type="button" label="Đăng nhập" [rounded]="true"
+        style="background-color: #F24A21;" class="w-full bg-red-500 border-none text-white text-lg font-semibold">
+      </button>
+      <div class="flex justify-end text-sm">
+        <span>{{'Chưa có tài khoản '}}</span><a href="#" class="text-blue-600">Tạo tài khoản</a>
+      </div>
     </div>
   </div>
 
-  <!-- Quên mật khẩu -->
-  <div class="flex justify-end text-sm">
-    <a href="#" class="text-blue-600">Quên mật khẩu ?</a>
-  </div>
-
-  <!-- Nút đăng nhập -->
-  <button (click)="onLogin()" [loading]="loading" pButton type="button" label="Đăng nhập" [rounded]="true" style="background-color: #F24A21;"
-    class="w-full bg-red-500 border-none text-white text-lg font-semibold">
-  </button>
 </div>

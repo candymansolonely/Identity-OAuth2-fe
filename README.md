@@ -1,5 +1,7 @@
 # identity-fe
 
+ng serve --host --port 7000 --ssl true --ssl-key ./ssl/localhost.key --ssl-cert ./ssl/localhost.crt --disable-host-check
+
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.15.
 
 ## clone submodule (Subproject)

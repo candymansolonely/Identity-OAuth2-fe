@@ -1,7 +1,7 @@
 {
   "api": {
-    "baseUrl": "https://localhost:5001/api"
+    "baseUrl": "https://identity-be.lhtrung.io.vn/api"
   },
-  "projectTitle": "Đăng nhập",
-  "favicon": "assets/images/favicon.ico"
+  "projectTitle": "Đăng nhập - test",
+  "favicon": "assets/images/favicon.png"
 }

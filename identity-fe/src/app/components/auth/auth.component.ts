@@ -8,5 +8,7 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './auth.component.scss'
 })
 export class AuthComponent {
-
+  branchName = 'Lee Company';
+  text = 'Done is better than perfect';
+  author = 'Facebook'
 }

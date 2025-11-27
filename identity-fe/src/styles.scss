@@ -1,9 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+@use './assets/custom-scss/font.scss';
 @use './assets/custom-scss/customs.scss';
+
 .layout-content-wrapper-inside {
   max-width: 100%;
 }
+
 .tw-w-6 {
   width: 1.5rem;
 }
 
+.bg-blur {
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(30px);
+}
+
+.bg-intro {
+  background: #ffffff;
+  background: linear-gradient(162deg, rgba(255, 255, 255, 1) 0%,
+  rgba(102, 209, 255, 1) 20%,
+  rgba(255, 255, 255, 1) 46%,
+  rgba(135, 199, 255, 1) 70%,
+  rgba(255, 255, 255, 1) 100%);
+}
+body {
+  font-family: "Be Vietnam Pro", sans-serif;
+  line-height: normal;
+}
